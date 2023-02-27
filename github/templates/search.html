@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+
+    
+
+</head>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+</style>
+<body>
+    
+    {% include 'partials/_navbar.html' %}
+    <h1>Search results for {{keyword}}</h1>
+    <table style="width:100%">
+        <tr>
+          <th>UserName</th>
+          <th>Followers</th>
+          <th>Follows</th>
+          <th>Repos</th>
+          <th>Stars</th>
+          <th>Contrib</th>
+        </tr>
+        <tr>
+          <td>{{userName}}</td>
+          <td>{{followers}}</td>
+          <td>{{following}}</td>
+          <td>{{repos}}</td>
+          <td>{{stars}}</td>
+          <td>{{contrib}}</td>
+          
+        </tr>
+      </table>
+      
+      
+    
+
+</body>
+</html>

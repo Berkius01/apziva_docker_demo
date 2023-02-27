@@ -1,0 +1,24 @@
+services:
+  web:
+    build:
+      context: ./apziva
+      dockerfile: Dockerfile
+    command:
+    ports:
+      - 8000:8000
+    enviroment:
+      - POSTGRES_NAME=
+      - POSTGRES_USER=
+      - PSOTGRES_PASSWORD=
+    depends_on:
+      - db
+  db:
+    image: postgres
+    volumes:
+      - postgresdb:/var/lib/postgresql/data
+    enviroment:
+      - POSTGRES_NAME=
+      - POSTGRES_USER=
+      - POSTGRES_PASSWORD=
+volumes:
+  postgresdb:
